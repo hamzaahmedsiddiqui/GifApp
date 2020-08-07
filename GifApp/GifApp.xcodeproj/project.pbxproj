@@ -3,27 +3,57 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		7E268B4B24DCA03B0071BF3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E268B4A24DCA03B0071BF3B /* AppDelegate.swift */; };
 		7E268B4D24DCA03B0071BF3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E268B4C24DCA03B0071BF3B /* SceneDelegate.swift */; };
-		7E268B4F24DCA03B0071BF3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E268B4E24DCA03B0071BF3B /* ViewController.swift */; };
 		7E268B5224DCA03B0071BF3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E268B5024DCA03B0071BF3B /* Main.storyboard */; };
 		7E268B5424DCA03F0071BF3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E268B5324DCA03F0071BF3B /* Assets.xcassets */; };
 		7E268B5724DCA03F0071BF3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E268B5524DCA03F0071BF3B /* LaunchScreen.storyboard */; };
+		7E268B6024DCA8E10071BF3B /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E268B5F24DCA8E10071BF3B /* Services.swift */; };
+		7E268B8424DCB9910071BF3B /* ModelDownsized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E268B7924DCB9900071BF3B /* ModelDownsized.swift */; };
+		7E268B8524DCB9910071BF3B /* ModelFixedHeightDownsampled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E268B7A24DCB9900071BF3B /* ModelFixedHeightDownsampled.swift */; };
+		7E268B8624DCB9910071BF3B /* ModelMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E268B7B24DCB9900071BF3B /* ModelMeta.swift */; };
+		7E268B8824DCB9910071BF3B /* ModelOriginal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E268B7D24DCB9900071BF3B /* ModelOriginal.swift */; };
+		7E268B8924DCB9910071BF3B /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E268B7E24DCB9910071BF3B /* ModelData.swift */; };
+		7E268B8A24DCB9910071BF3B /* ModelFixedHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E268B7F24DCB9910071BF3B /* ModelFixedHeight.swift */; };
+		7E268B8B24DCB9910071BF3B /* ModelLooping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E268B8024DCB9910071BF3B /* ModelLooping.swift */; };
+		7E268B8C24DCB9910071BF3B /* ModelDownsizedSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E268B8124DCB9910071BF3B /* ModelDownsizedSmall.swift */; };
+		7E268B8D24DCB9910071BF3B /* ModelRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E268B8224DCB9910071BF3B /* ModelRandom.swift */; };
+		7E268B8E24DCB9910071BF3B /* ModelImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E268B8324DCB9910071BF3B /* ModelImage.swift */; };
+		7E268B9124DCBB2D0071BF3B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E268B9024DCBB2D0071BF3B /* Constant.swift */; };
+		7E268B9324DCE1CE0071BF3B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E268B9224DCE1CE0071BF3B /* FirstViewController.swift */; };
+		7E268B9724DCF5E40071BF3B /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E268B9624DCF5E40071BF3B /* Kingfisher.framework */; };
+		A99070CCC0D654C3D2335CA4 /* Pods_GifApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C07C5FFA5D046D35DB09CE /* Pods_GifApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34C07C5FFA5D046D35DB09CE /* Pods_GifApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E268B4724DCA03B0071BF3B /* GifApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GifApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E268B4A24DCA03B0071BF3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E268B4C24DCA03B0071BF3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7E268B4E24DCA03B0071BF3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7E268B5124DCA03B0071BF3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E268B5324DCA03F0071BF3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E268B5624DCA03F0071BF3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E268B5824DCA03F0071BF3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E268B5F24DCA8E10071BF3B /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		7E268B7924DCB9900071BF3B /* ModelDownsized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelDownsized.swift; sourceTree = "<group>"; };
+		7E268B7A24DCB9900071BF3B /* ModelFixedHeightDownsampled.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelFixedHeightDownsampled.swift; sourceTree = "<group>"; };
+		7E268B7B24DCB9900071BF3B /* ModelMeta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelMeta.swift; sourceTree = "<group>"; };
+		7E268B7D24DCB9900071BF3B /* ModelOriginal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelOriginal.swift; sourceTree = "<group>"; };
+		7E268B7E24DCB9910071BF3B /* ModelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		7E268B7F24DCB9910071BF3B /* ModelFixedHeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelFixedHeight.swift; sourceTree = "<group>"; };
+		7E268B8024DCB9910071BF3B /* ModelLooping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelLooping.swift; sourceTree = "<group>"; };
+		7E268B8124DCB9910071BF3B /* ModelDownsizedSmall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelDownsizedSmall.swift; sourceTree = "<group>"; };
+		7E268B8224DCB9910071BF3B /* ModelRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelRandom.swift; sourceTree = "<group>"; };
+		7E268B8324DCB9910071BF3B /* ModelImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelImage.swift; sourceTree = "<group>"; };
+		7E268B9024DCBB2D0071BF3B /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		7E268B9224DCE1CE0071BF3B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		7E268B9624DCF5E40071BF3B /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E40119A20CAA731C6E4577E /* Pods-GifApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GifApp.debug.xcconfig"; path = "Target Support Files/Pods-GifApp/Pods-GifApp.debug.xcconfig"; sourceTree = "<group>"; };
+		EAA702609019CC7BBEA5D67E /* Pods-GifApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GifApp.release.xcconfig"; path = "Target Support Files/Pods-GifApp/Pods-GifApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +61,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E268B9724DCF5E40071BF3B /* Kingfisher.framework in Frameworks */,
+				A99070CCC0D654C3D2335CA4 /* Pods_GifApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5DCF53B444BC5158E5110E43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E268B9624DCF5E40071BF3B /* Kingfisher.framework */,
+				34C07C5FFA5D046D35DB09CE /* Pods_GifApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7E268B3E24DCA03A0071BF3B = {
 			isa = PBXGroup;
 			children = (
 				7E268B4924DCA03B0071BF3B /* GifApp */,
 				7E268B4824DCA03B0071BF3B /* Products */,
+				CA52A9C66B510BC38B5C146C /* Pods */,
+				5DCF53B444BC5158E5110E43 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +99,68 @@
 		7E268B4924DCA03B0071BF3B /* GifApp */ = {
 			isa = PBXGroup;
 			children = (
+				7E268B8F24DCBB170071BF3B /* Constant */,
+				7E268B6124DCA9050071BF3B /* Model */,
+				7E268B5E24DCA7090071BF3B /* Services */,
 				7E268B4A24DCA03B0071BF3B /* AppDelegate.swift */,
 				7E268B4C24DCA03B0071BF3B /* SceneDelegate.swift */,
-				7E268B4E24DCA03B0071BF3B /* ViewController.swift */,
+				7E268B9224DCE1CE0071BF3B /* FirstViewController.swift */,
 				7E268B5024DCA03B0071BF3B /* Main.storyboard */,
 				7E268B5324DCA03F0071BF3B /* Assets.xcassets */,
 				7E268B5524DCA03F0071BF3B /* LaunchScreen.storyboard */,
 				7E268B5824DCA03F0071BF3B /* Info.plist */,
 			);
 			path = GifApp;
+			sourceTree = "<group>";
+		};
+		7E268B5E24DCA7090071BF3B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7E268B5F24DCA8E10071BF3B /* Services.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7E268B6124DCA9050071BF3B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7E268B6224DCA9230071BF3B /* RandomGifModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7E268B6224DCA9230071BF3B /* RandomGifModel */ = {
+			isa = PBXGroup;
+			children = (
+				7E268B8224DCB9910071BF3B /* ModelRandom.swift */,
+				7E268B7E24DCB9910071BF3B /* ModelData.swift */,
+				7E268B7B24DCB9900071BF3B /* ModelMeta.swift */,
+				7E268B8324DCB9910071BF3B /* ModelImage.swift */,
+				7E268B7924DCB9900071BF3B /* ModelDownsized.swift */,
+				7E268B8124DCB9910071BF3B /* ModelDownsizedSmall.swift */,
+				7E268B7F24DCB9910071BF3B /* ModelFixedHeight.swift */,
+				7E268B7A24DCB9900071BF3B /* ModelFixedHeightDownsampled.swift */,
+				7E268B8024DCB9910071BF3B /* ModelLooping.swift */,
+				7E268B7D24DCB9900071BF3B /* ModelOriginal.swift */,
+			);
+			path = RandomGifModel;
+			sourceTree = "<group>";
+		};
+		7E268B8F24DCBB170071BF3B /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				7E268B9024DCBB2D0071BF3B /* Constant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		CA52A9C66B510BC38B5C146C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E40119A20CAA731C6E4577E /* Pods-GifApp.debug.xcconfig */,
+				EAA702609019CC7BBEA5D67E /* Pods-GifApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +170,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E268B5B24DCA03F0071BF3B /* Build configuration list for PBXNativeTarget "GifApp" */;
 			buildPhases = (
+				BCDC3E06E87890AACFBD4DF0 /* [CP] Check Pods Manifest.lock */,
 				7E268B4324DCA03A0071BF3B /* Sources */,
 				7E268B4424DCA03A0071BF3B /* Frameworks */,
 				7E268B4524DCA03A0071BF3B /* Resources */,
+				58F94B99F3E6F9B61EB214F3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,13 +231,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		58F94B99F3E6F9B61EB214F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GifApp/Pods-GifApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GifApp/Pods-GifApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GifApp/Pods-GifApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCDC3E06E87890AACFBD4DF0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GifApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7E268B4324DCA03A0071BF3B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E268B4F24DCA03B0071BF3B /* ViewController.swift in Sources */,
+				7E268B9324DCE1CE0071BF3B /* FirstViewController.swift in Sources */,
+				7E268B8424DCB9910071BF3B /* ModelDownsized.swift in Sources */,
+				7E268B9124DCBB2D0071BF3B /* Constant.swift in Sources */,
+				7E268B8824DCB9910071BF3B /* ModelOriginal.swift in Sources */,
+				7E268B8524DCB9910071BF3B /* ModelFixedHeightDownsampled.swift in Sources */,
+				7E268B8E24DCB9910071BF3B /* ModelImage.swift in Sources */,
+				7E268B6024DCA8E10071BF3B /* Services.swift in Sources */,
+				7E268B8B24DCB9910071BF3B /* ModelLooping.swift in Sources */,
+				7E268B8624DCB9910071BF3B /* ModelMeta.swift in Sources */,
+				7E268B8D24DCB9910071BF3B /* ModelRandom.swift in Sources */,
+				7E268B8924DCB9910071BF3B /* ModelData.swift in Sources */,
+				7E268B8C24DCB9910071BF3B /* ModelDownsizedSmall.swift in Sources */,
 				7E268B4B24DCA03B0071BF3B /* AppDelegate.swift in Sources */,
+				7E268B8A24DCB9910071BF3B /* ModelFixedHeight.swift in Sources */,
 				7E268B4D24DCA03B0071BF3B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +434,7 @@
 		};
 		7E268B5C24DCA03F0071BF3B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E40119A20CAA731C6E4577E /* Pods-GifApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +453,7 @@
 		};
 		7E268B5D24DCA03F0071BF3B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAA702609019CC7BBEA5D67E /* Pods-GifApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
