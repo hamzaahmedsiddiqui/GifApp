@@ -34,6 +34,7 @@
 		7E268BFC24E063610071BF3B /* ModelSearchMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E268BFB24E063600071BF3B /* ModelSearchMeta.swift */; };
 		7E268BFF24E06EE30071BF3B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E268BFE24E06EE30071BF3B /* Utilities.swift */; };
 		7E268C0124E0D9510071BF3B /* GifDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E268C0024E0D9510071BF3B /* GifDetailViewController.swift */; };
+		7E62C26F24E1DF1D0024EAB8 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E62C26E24E1DF1D0024EAB8 /* Enums.swift */; };
 		A99070CCC0D654C3D2335CA4 /* Pods_GifApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C07C5FFA5D046D35DB09CE /* Pods_GifApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		7E268BFB24E063600071BF3B /* ModelSearchMeta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelSearchMeta.swift; sourceTree = "<group>"; };
 		7E268BFE24E06EE30071BF3B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		7E268C0024E0D9510071BF3B /* GifDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifDetailViewController.swift; sourceTree = "<group>"; };
+		7E62C26E24E1DF1D0024EAB8 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		8E40119A20CAA731C6E4577E /* Pods-GifApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GifApp.debug.xcconfig"; path = "Target Support Files/Pods-GifApp/Pods-GifApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EAA702609019CC7BBEA5D67E /* Pods-GifApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GifApp.release.xcconfig"; path = "Target Support Files/Pods-GifApp/Pods-GifApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,6 +163,7 @@
 			children = (
 				7E268B9024DCBB2D0071BF3B /* Constant.swift */,
 				7E268BFE24E06EE30071BF3B /* Utilities.swift */,
+				7E62C26E24E1DF1D0024EAB8 /* Enums.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				7E268B8924DCB9910071BF3B /* ModelData.swift in Sources */,
 				7E268B4B24DCA03B0071BF3B /* AppDelegate.swift in Sources */,
 				7E268BE424DE37A10071BF3B /* ModelSearchImage.swift in Sources */,
+				7E62C26F24E1DF1D0024EAB8 /* Enums.swift in Sources */,
 				7E268B4D24DCA03B0071BF3B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

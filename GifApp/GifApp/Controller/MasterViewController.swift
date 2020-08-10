@@ -12,28 +12,23 @@ protocol searchProtocol {
 }
 class MasterViewController: UIViewController {
    
-   
    @IBOutlet weak var searchBar: UISearchBar!
    @IBOutlet weak var customView: UIView!
-   
    var searchVC : SearchViewController!
    var firstVC: FirstViewController!
-   var delegate : searchProtocol!
+   
    override func viewDidLoad() {
       super.viewDidLoad()
       addingChildVC()
-      
    }
    
 }
-
-//adding child view controller
+// MARK: adding child view controller
 extension MasterViewController{
    func addingChildVC(){
-      let storyboard = Utilities.getStoryboard(name: stoaryBoardMain)
-      searchVC = storyboard.instantiateViewController(identifier: searchViewController)
-      firstVC = storyboard.instantiateViewController(identifier: firstViewController)
-      
+      let storyboard = Utilities.getStoryboard(name: Storyboards.main.rawValue)
+      searchVC = storyboard.instantiateViewController(identifier: ViewControllers.searchViewController.rawValue)
+      firstVC = storyboard.instantiateViewController(identifier: ViewControllers.firstViewController.rawValue)
       Utilities.addViewControllerAsChildViewController(searchVC, parentVC: self, yConstraint: 0, heightConstraint: self.customView.frame.height, parentCustomView: customView)
       Utilities.addViewControllerAsChildViewController(firstVC, parentVC: self, yConstraint: 0, heightConstraint: self.customView.frame.height, parentCustomView: customView)
       searchBar.delegate = self
@@ -43,18 +38,15 @@ extension MasterViewController{
 
 
 
-// search bar delegates
+// MARK: search bar delegates
 extension MasterViewController:UISearchBarDelegate{
    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-      
       searchVC.view.isHidden = false
       firstVC.view.isHidden = true
       searchBar.showsCancelButton = true
-      
    }
    
    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-      print("search cancel button clicked ")
       searchBar.showsCancelButton = false
       searchVC.view.isHidden = true
       firstVC.view.isHidden = false
@@ -63,20 +55,11 @@ extension MasterViewController:UISearchBarDelegate{
    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
       let searchTextCount =  searchText.count
       if(searchTextCount % 2 == 0) || (searchTextCount == 0) {
-         
          searchVC.searchFunctionCall(searchText: searchText)
-         
       }
-      
    }
    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
       searchBar.resignFirstResponder()
-      
-      
       searchVC.searchFunctionCall(searchText: searchBar.text ?? "")
-      
-      
    }
-   
-   
 }

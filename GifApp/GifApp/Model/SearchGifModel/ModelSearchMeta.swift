@@ -12,7 +12,6 @@ class ModelSearchMeta : Decodable {
 	let responseId : String?
 	let status : Int?
 
-
 	enum CodingKeys: String, CodingKey {
 		case msg = "msg"
 		case responseId = "response_id"

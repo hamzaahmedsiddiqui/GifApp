@@ -40,5 +40,4 @@ class ModelFixedHeight : Codable {
 		width = try values.decodeIfPresent(String.self, forKey: .width) ?? String()
 	}
 
-
 }

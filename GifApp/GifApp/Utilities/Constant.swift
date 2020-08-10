@@ -8,18 +8,17 @@
 
 import Foundation
 import UIKit
+class Constants{
+   static let baseUrl = "http://api.giphy.com/v1/gifs/"
+   static let api_key = "fkEOWkwp95SVkJU1CTtZqQA5O5YYITY2"
+   static let randomGifUrl = "random"
+   static let searchUrl = "search"
+   
+   // image name
+   static let pg = "pg"
+   static let pg13 = "pg13"
+   static let r = "r"
+}
 
-let baseUrl = "http://api.giphy.com/v1/gifs/"
-let api_key = "fkEOWkwp95SVkJU1CTtZqQA5O5YYITY2"
-let randomGifUrl = "random"
-let searchUrl = "search"
-let gifCellIdentifier = "cell"
-let stoaryBoardMain = "Main"
-let searchViewController = "SearchViewController"
-let firstViewController = "FirstViewController"
-
-
-// segue
-let gifDetailSegue = "gifDetail"
 
 

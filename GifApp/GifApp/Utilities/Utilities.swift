@@ -20,4 +20,15 @@ class Utilities{
      //  childVC.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
        childVC.didMove(toParent: parentVC)
    }
+   
+   
+   static func alertView(title:String, message:String, VC:UIViewController)
+   {
+      
+      let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+
+      alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
+      VC.present(alert, animated: true, completion: nil)
+   }
 }

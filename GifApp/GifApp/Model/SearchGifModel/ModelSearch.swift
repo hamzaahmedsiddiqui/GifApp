@@ -12,7 +12,6 @@ class ModelSearch : Decodable {
 	let meta : ModelSearchMeta?
 	let pagination : ModelSearchPagination?
 
-
 	enum CodingKeys: String, CodingKey {
 		case data = "data"
 		case meta
@@ -24,6 +23,5 @@ class ModelSearch : Decodable {
 		meta = try values.decodeIfPresent(ModelSearchMeta.self, forKey: .meta)  //?? ModelSearchMeta()
 		pagination = try values.decodeIfPresent(ModelSearchPagination.self, forKey: .pagination)  //?? ModelSearchPagination()
 	}
-
 
 }

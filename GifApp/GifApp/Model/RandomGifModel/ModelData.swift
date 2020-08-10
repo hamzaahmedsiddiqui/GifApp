@@ -16,9 +16,7 @@ class ModelData : Decodable {
    enum CodingKeys: String, CodingKey {
       
       case images
-      
       case rating = "rating"
-      
       case title = "title"
       
    }
@@ -26,9 +24,7 @@ class ModelData : Decodable {
       let values = try decoder.container(keyedBy: CodingKeys.self)
       
       images = try values.decodeIfPresent(ModelImage.self, forKey: .images)  //?? ModelImage()
-      
       rating = try values.decodeIfPresent(String.self, forKey: .rating) ?? String()
-      
       title = try values.decodeIfPresent(String.self, forKey: .title) ?? String()
       
    }

@@ -11,4 +11,8 @@ import UIKit
 class GifCollectionViewCell: UICollectionViewCell {
    @IBOutlet weak var stillGifImage: UIImageView!
    
+   func configCell(cellModel : SearchViewModel){
+      let stillUrl = URL(string: cellModel.stilGifUrl!)
+      self.stillGifImage.kf.setImage(with: stillUrl)
+   }
 }

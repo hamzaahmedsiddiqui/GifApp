@@ -11,17 +11,15 @@ import UIKit
 class Services: NSObject {
    
    static let sharedInstance = Services()
-   
-   
-   // function for getting ramdom gif from API
+   private override init() {}
+   // MARK: api call function for getting ramdom gif from API
    func getRandomGif(completion: @escaping (ModelData?, Error?) ->()){
       let dataTask: URLSessionDataTask?
-      let urlString = baseUrl + randomGifUrl //creating url to request data
+      let urlString = Constants.baseUrl + Constants.randomGifUrl //creating url to request data
       guard let url = URL(string: urlString) else {return}
       var request:URLRequest = URLRequest(url: url)
       request.httpMethod = "GET"
-      request.allHTTPHeaderFields = ["api_key":api_key]
-      
+      request.allHTTPHeaderFields = ["api_key": Constants.api_key]
       dataTask = URLSession.shared.dataTask(with: request) { data,responce,error in
          
          if let err = error {
@@ -48,12 +46,12 @@ class Services: NSObject {
       }
       dataTask?.resume()
    }
-   
+   // MARK: api call function for search
    func searchGif(_ searchText:String, completion:@escaping ([ModelSearchData]?, Error?) ->())
    {
       var dataTask: URLSessionDataTask?
-      let parameters = ["api_key":api_key,"q":searchText]
-      let url = baseUrl + searchUrl //creating url to request data
+      let parameters = ["api_key": Constants.api_key,"q":searchText]
+      let url = Constants.baseUrl + Constants.searchUrl //creating url to request data
       
       var components = URLComponents(string: url)!
       components.queryItems = parameters.map { (key, value) in
@@ -72,7 +70,6 @@ class Services: NSObject {
          } else {
             DispatchQueue.main.async {
                guard let data = data else {return}
-         
                do {
                   let result = try JSONDecoder().decode(ModelSearch.self, from: data)
                   completion(result.data,error)
@@ -80,7 +77,6 @@ class Services: NSObject {
                catch let jsonErr {
                   print("json error \(jsonErr.localizedDescription)")
                }
-               
             }
          }
       }

@@ -11,7 +11,6 @@ class ModelRandom : Decodable {
 	let data : ModelData?
 	let meta : ModelMeta?
 
-
 	enum CodingKeys: String, CodingKey {
 		case data
 		case meta
@@ -21,6 +20,5 @@ class ModelRandom : Decodable {
 		data = try values.decodeIfPresent(ModelData.self, forKey: .data)  //?? ModelData()
 		meta = try values.decodeIfPresent(ModelMeta.self, forKey: .meta)  //?? ModelMeta()
 	}
-
 
 }

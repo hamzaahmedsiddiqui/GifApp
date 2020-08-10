@@ -20,7 +20,6 @@ class FirstViewController: UIViewController {
    
    override func viewDidLoad() {
       super.viewDidLoad()
-      
       self.getRandomGif()  //getting random gif
    }
    
@@ -28,7 +27,7 @@ class FirstViewController: UIViewController {
 
 
 
-// getting data
+// MARK: getting data
 extension FirstViewController{
    
    
@@ -38,6 +37,7 @@ extension FirstViewController{
       Services.sharedInstance.getRandomGif { (data,error) in
          if let err = error  {
             print("\(err.localizedDescription)")
+            self.showAlert(title:err.localizedDescription,msg:"")
          }
          else
          {
@@ -58,14 +58,13 @@ extension FirstViewController{
       self.gifTitle.text = gifTitle
       self.gifUrl.text = gifUrl
       var image:UIImage?
-      if pg == "pg-13"{
-         image = UIImage(named: "pg13")
-      }else if pg == "r"
-      {
-         image = UIImage(named: "r")
-      }else
-      {
-         image = UIImage(named: "pg")
+      switch pg {
+      case pgEnum.pg13.rawValue:
+         image = UIImage(named: Constants.pg13)
+      case pgEnum.r.rawValue:
+         image = UIImage(named: Constants.r)
+      default:
+         image = UIImage(named: Constants.pg)
       }
       pgImage.image = image
    }
@@ -76,5 +75,15 @@ extension FirstViewController{
       imageView.kf.setImage(with: url)
       self.activityIndicator.stopAnimating()
       self.activityIndicator.isHidden = true
+   }
+}
+// MARK: Alert function in shared class
+extension UIViewController {
+   func showAlert(title: String, msg: String) {
+      DispatchQueue.main.async {
+         let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+         self.present(alert, animated: true, completion: nil)
+      }
    }
 }

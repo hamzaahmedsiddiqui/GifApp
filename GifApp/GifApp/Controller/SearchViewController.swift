@@ -13,64 +13,39 @@ class SearchViewController: UIViewController {
    
    
    @IBOutlet var gifCollectionView: UICollectionView!
-  
-   var searchText = ""
-
    var arrGif = [SearchViewModel]()
-   var gifDetail:SearchViewModel?
+   let gifCellIdentifier = "cell"
    
    override func viewDidLoad() {
       super.viewDidLoad()
-   
-   }
-   
-   override func viewWillAppear(_ animated: Bool) {
-      super.viewWillAppear(true)
       
    }
-   
-   
    func getSearchGifData(searchText:String){
       Services.sharedInstance.searchGif(searchText){ (data,error) in
          if let err = error{
             print(err.localizedDescription)
+            self.showAlert(title:err.localizedDescription,msg:"")
          }else{
             
             self.arrGif =  data?.map({return SearchViewModel(data:$0)}) ?? []
             print(self.arrGif.count) 
             DispatchQueue.main.async {
-            
-                  self.gifCollectionView.reloadData()
-
-               
+               self.gifCollectionView.reloadData()
             }
          }
       }
    }
-   
-   //segue function (exporting data to other view)
-   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     if segue.identifier == gifDetailSegue {
-       let detail = segue.destination as! GifDetailViewController
-      detail.gifDetail = gifDetail
-     }
-   }
 }
-
-
-//search protocol function implement
-extension SearchViewController:searchProtocol{
+// MARK: search protocol function implement
+extension SearchViewController: searchProtocol{
    func searchFunctionCall(searchText: String) {
-      print(searchText)
-      
       //getting data with search
       getSearchGifData(searchText: searchText)
       
    }
 }
 
-
-//collection view delegates
+// MARK: collection view delegates and datasource
 extension SearchViewController:UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout
 {
    
@@ -79,26 +54,28 @@ extension SearchViewController:UICollectionViewDataSource,UICollectionViewDelega
    }
    
    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-      
       let cellwidth = self.view.frame.width/3 - 5
+      
       return CGSize(width: cellwidth, height: cellwidth)
    }
    
    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: gifCellIdentifier, for: indexPath) as! GifCollectionViewCell
- 
-      
       let gifData =  arrGif[indexPath.row]
-      let stillUrl = URL(string: gifData.stilGifUrl!)
-      cell.stillGifImage.kf.setImage(with: stillUrl)
+      cell.configCell(cellModel: gifData)
+     
       return cell
    }
    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
       let indexSelected = indexPath.row
-      gifDetail =  arrGif[indexSelected]
-      
-      self.performSegue(withIdentifier: gifDetailSegue, sender: nil)
-      
+      let gifDetail =  arrGif[indexSelected]
+      self.goToGifDetailVC(data: gifDetail)
+   }
+   func goToGifDetailVC(data : SearchViewModel){
+      let sb = Utilities.getStoryboard(name: Storyboards.main.rawValue)
+      let vc = sb.instantiateViewController(identifier: ViewControllers.gifDetailViewController.rawValue) as! GifDetailViewController
+      vc.gifDetail = data
+      self.navigationController?.pushViewController(vc, animated: true)
    }
    
 }
