@@ -12,16 +12,24 @@ protocol searchProtocol {
 }
 class MasterViewController: UIViewController {
    
-  
+   
    @IBOutlet weak var searchBar: UISearchBar!
    @IBOutlet weak var customView: UIView!
-
+   
    var searchVC : SearchViewController!
    var firstVC: FirstViewController!
    var delegate : searchProtocol!
    override func viewDidLoad() {
       super.viewDidLoad()
+      addingChildVC()
       
+   }
+   
+}
+
+//adding child view controller
+extension MasterViewController{
+   func addingChildVC(){
       let storyboard = Utilities.getStoryboard(name: stoaryBoardMain)
       searchVC = storyboard.instantiateViewController(identifier: searchViewController)
       firstVC = storyboard.instantiateViewController(identifier: firstViewController)
@@ -29,7 +37,6 @@ class MasterViewController: UIViewController {
       Utilities.addViewControllerAsChildViewController(searchVC, parentVC: self, yConstraint: 0, heightConstraint: self.customView.frame.height, parentCustomView: customView)
       Utilities.addViewControllerAsChildViewController(firstVC, parentVC: self, yConstraint: 0, heightConstraint: self.customView.frame.height, parentCustomView: customView)
       searchBar.delegate = self
-
    }
    
 }
@@ -56,14 +63,19 @@ extension MasterViewController:UISearchBarDelegate{
    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
       let searchTextCount =  searchText.count
       if(searchTextCount % 2 == 0) || (searchTextCount == 0) {
-
-          searchVC.searchFunctionCall(searchText: searchText)
+         
+         searchVC.searchFunctionCall(searchText: searchText)
          
       }
       
    }
    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
       searchBar.resignFirstResponder()
+      
+      
+      searchVC.searchFunctionCall(searchText: searchBar.text ?? "")
+      
+      
    }
    
    

@@ -21,19 +21,9 @@ class GifDetailViewController: UIViewController {
    override func viewDidLoad() {
       super.viewDidLoad()
       self.activityIndicator.startAnimating()
-      settingCustomBackButton()
       gifDetailSetup()
-      
    }
    
-   func settingCustomBackButton(){
-      
-      self.navigationItem.backBarButtonItem?.tintColor = .black
-      
-   }
-   
-   
-  
 }
 
 
