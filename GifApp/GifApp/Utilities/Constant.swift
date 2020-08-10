@@ -12,5 +12,14 @@ import UIKit
 let baseUrl = "http://api.giphy.com/v1/gifs/"
 let api_key = "fkEOWkwp95SVkJU1CTtZqQA5O5YYITY2"
 let randomGifUrl = "random"
+let searchUrl = "search"
+let gifCellIdentifier = "cell"
+let stoaryBoardMain = "Main"
+let searchViewController = "SearchViewController"
+let firstViewController = "FirstViewController"
+
+
+// segue
+let gifDetailSegue = "gifDetail"
 
 

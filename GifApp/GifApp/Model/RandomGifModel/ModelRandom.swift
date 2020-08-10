@@ -3,7 +3,6 @@
 //
 //	Create by hamza Ahmed on 7/8/2020
 //	Copyright © 2020. All rights reserved.
-//	Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
 import Foundation
 

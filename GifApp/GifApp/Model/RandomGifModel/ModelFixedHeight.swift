@@ -1,13 +1,12 @@
 //
 //	ModelFixedHeight.swift
 //
-//	Create by hamza Ahmed on 7/8/2020
+//	Create by hamza Ahmed on 8/8/2020
 //	Copyright © 2020. All rights reserved.
-//	Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
 import Foundation
 
-class ModelFixedHeight : Decodable {
+class ModelFixedHeight : Codable {
 
 	let height : String?
 	let mp4 : String?
