@@ -30,6 +30,5 @@ class ModelSearchData : Decodable {
       title = try values.decodeIfPresent(String.self, forKey: .title) ?? String()
       
    }
-   
-   
+
 }
