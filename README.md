@@ -19,13 +19,27 @@ First screen showing random animated GIF with url, title and age restriction.The
 
 
 GroupFolder descriptions:
-StoryBoard : contains Main storyBoard and Lunch Screen 
-Model : contain related models which are used in modeling and handling data coming from servers (random gif api used and search gif api used ). Use model classes to decouple data 
-View: contain view class of collection cell 
-ViewModel : Contain ViewModel used to retrieves the necessary data from the DataModel.
-Controller: contains all the UiViewController classes connected to uiviewcontroller in stoaryboard , playing role as UI based functions 
-Utilities : contain classes used in differnet utilities functions
-Services: contain class which encapsulates our network request call to the server to get data 
+
+StoryBoard : 
+contains Main storyBoard and Lunch Screen.  
+
+Model : 
+contain related models which are used in modeling and handling data coming from servers (random gif api used and search gif api used ). Use model classes to decouple data. 
+
+View: 
+contain view class of collection cell. 
+
+ViewModel : 
+Contain ViewModel used to retrieves the necessary data from the DataModel.
+
+Controller:
+contains all the UiViewController classes connected to uiviewcontroller in stoaryboard , playing role as UI based functions. 
+
+Utilities : 
+contain classes used in differnet utilities functions
+
+Services: 
+contain class which encapsulates our network request call to the server to get data. 
 
 
 
