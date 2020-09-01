@@ -9,17 +9,17 @@
 import UIKit
 
 class SearchViewModel: NSObject {
-   var stilGifUrl:String?
-   var gifUrl:String?
-   var gifTitle:String?
-   var gifPg:String?
+   let stilGifUrl:String?
+   let gifUrl:String?
+   let gifTitle:String?
+   let gifPg:String?
    
    
    init(data:ModelSearchData) {
-      self.stilGifUrl = data.images?.fixedWidthStill?.url ?? ""
-      self.gifTitle = data.title ?? ""
-      self.gifPg = data.rating ?? ""
-      self.gifUrl = data.images?.fixedWidth?.url ?? ""
+      stilGifUrl = data.images?.fixedWidthStill?.url ?? ""
+      gifTitle = data.title ?? ""
+      gifPg = data.rating ?? ""
+      gifUrl = data.images?.fixedWidth?.url ?? ""
     
    }
 }

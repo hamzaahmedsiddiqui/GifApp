@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+ApiKeys.plist
+GifApp
+
+Created by hamza Ahmed on 01.09.20.
+Copyright (c) 2020 Hamza. All rights reserved.
+-->
+<plist version="1.0">
+   <dict>
+      <key>API_KEY</key>
+      <string>fkEOWkwp95SVkJU1CTtZqQA5O5YYITY2</string>
+   </dict>
+</plist>

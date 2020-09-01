@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class GifDetailViewController: UIViewController {
+final class GifDetailViewController: UIViewController {
    @IBOutlet var imageView: UIImageView!
    @IBOutlet var pgImage: UIImageView!
    @IBOutlet var gifTitle: UILabel!
@@ -28,7 +28,7 @@ class GifDetailViewController: UIViewController {
 
 // MARK: setting data
 extension GifDetailViewController{
-   func gifDetailSetup(){
+  private func gifDetailSetup(){
       //setting navigation title
       let title = gifDetail?.gifTitle ?? ""
       navigationItem.title = title
@@ -54,7 +54,7 @@ extension GifDetailViewController{
       
       pgImage.image = image!
       activityIndicator.stopAnimating()
-      self.activityIndicator.isHidden = true
+      activityIndicator.isHidden = true
    }
    
 }

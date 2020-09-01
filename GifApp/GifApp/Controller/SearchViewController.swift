@@ -9,33 +9,30 @@
 import UIKit
 import Kingfisher
 
-class SearchViewController: UIViewController {
+final class SearchViewController: UIViewController {
    
-   
-   @IBOutlet var gifCollectionView: UICollectionView!
+   @IBOutlet weak var gifCollectionView: UICollectionView!
    var arrGif = [SearchViewModel]()
-   let gifCellIdentifier = "cell"
    
    override func viewDidLoad() {
       super.viewDidLoad()
-      
    }
-   func getSearchGifData(searchText:String){
-      Services.sharedInstance.searchGif(searchText){ (data,error) in
+   
+  private func getSearchGifData(searchText:String){
+      Services.sharedInstance.searchGif(searchText){ [weak self](data,error) in
          if let err = error{
             print(err.localizedDescription)
-            self.showAlert(title:err.localizedDescription,msg:"")
+            self?.showAlert(title:err.localizedDescription,msg:"")
          }else{
-            
-            self.arrGif =  data?.map({return SearchViewModel(data:$0)}) ?? []
-            print(self.arrGif.count) 
+            self?.arrGif =  data?.map({return SearchViewModel(data:$0)}) ?? []
             DispatchQueue.main.async {
-               self.gifCollectionView.reloadData()
+               self?.gifCollectionView.reloadData()
             }
          }
       }
    }
 }
+
 // MARK: search protocol function implement
 extension SearchViewController: searchProtocol{
    func searchFunctionCall(searchText: String) {
@@ -50,7 +47,7 @@ extension SearchViewController:UICollectionViewDataSource,UICollectionViewDelega
 {
    
    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-      return self.arrGif.count
+      return arrGif.count
    }
    
    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -60,24 +57,25 @@ extension SearchViewController:UICollectionViewDataSource,UICollectionViewDelega
    }
    
    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: gifCellIdentifier, for: indexPath) as! GifCollectionViewCell
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.gifCellIdentifier, for: indexPath) as! GifCollectionViewCell
       let gifData =  arrGif[indexPath.row]
       cell.configCell(cellModel: gifData)
      
       return cell
    }
+   
    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
       let indexSelected = indexPath.row
       let gifDetail =  arrGif[indexSelected]
-      self.goToGifDetailVC(data: gifDetail)
+      goToGifDetailVC(data: gifDetail)
    }
-   func goToGifDetailVC(data : SearchViewModel){
+   
+   private func goToGifDetailVC(data : SearchViewModel){
       let sb = Utilities.getStoryboard(name: Storyboards.main.rawValue)
       let vc = sb.instantiateViewController(identifier: ViewControllers.gifDetailViewController.rawValue) as! GifDetailViewController
       vc.gifDetail = data
       self.navigationController?.pushViewController(vc, animated: true)
    }
-   
 }
 
 

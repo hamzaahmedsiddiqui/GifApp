@@ -10,15 +10,15 @@ import UIKit
 
 class FirstViewModel: NSObject {
    
-   var gifUrl:String?
-   var gifTitle:String?
-   var gifPg:String?
+   let gifUrl:String?
+   let gifTitle:String?
+   let gifPg:String?
    
    
    init(data:ModelData) {
-      self.gifUrl = data.images?.fixedWidth?.url
-      self.gifTitle = data.title
-      self.gifPg = data.rating
+      gifUrl = data.images?.fixedWidth?.url
+      gifTitle = data.title
+      gifPg = data.rating
    }
 
 }

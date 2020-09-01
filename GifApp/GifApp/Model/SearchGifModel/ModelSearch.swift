@@ -6,22 +6,9 @@
 
 import Foundation
 
-class ModelSearch : Decodable {
+struct ModelSearch : Decodable {
 
 	let data : [ModelSearchData]?
 	let meta : ModelSearchMeta?
 	let pagination : ModelSearchPagination?
-
-	enum CodingKeys: String, CodingKey {
-		case data = "data"
-		case meta
-		case pagination
-	}
-	required init(from decoder: Decoder) throws {
-		let values = try decoder.container(keyedBy: CodingKeys.self)
-		data = try values.decodeIfPresent([ModelSearchData].self, forKey: .data) ?? [ModelSearchData]()
-		meta = try values.decodeIfPresent(ModelSearchMeta.self, forKey: .meta)  //?? ModelSearchMeta()
-		pagination = try values.decodeIfPresent(ModelSearchPagination.self, forKey: .pagination)  //?? ModelSearchPagination()
-	}
-
 }

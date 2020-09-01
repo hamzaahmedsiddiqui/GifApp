@@ -35,6 +35,8 @@
 		7E268BFF24E06EE30071BF3B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E268BFE24E06EE30071BF3B /* Utilities.swift */; };
 		7E268C0124E0D9510071BF3B /* GifDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E268C0024E0D9510071BF3B /* GifDetailViewController.swift */; };
 		7E62C26F24E1DF1D0024EAB8 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E62C26E24E1DF1D0024EAB8 /* Enums.swift */; };
+		7E85BE9224FEB66500821359 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E85BE9124FEB66500821359 /* ApiKeys.plist */; };
+		7EEF40B024FB41B5007D0A42 /* ExtentionUiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEF40AF24FB41B5007D0A42 /* ExtentionUiViewController.swift */; };
 		A99070CCC0D654C3D2335CA4 /* Pods_GifApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C07C5FFA5D046D35DB09CE /* Pods_GifApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,8 @@
 		7E268BFE24E06EE30071BF3B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		7E268C0024E0D9510071BF3B /* GifDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifDetailViewController.swift; sourceTree = "<group>"; };
 		7E62C26E24E1DF1D0024EAB8 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		7E85BE9124FEB66500821359 /* ApiKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
+		7EEF40AF24FB41B5007D0A42 /* ExtentionUiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionUiViewController.swift; sourceTree = "<group>"; };
 		8E40119A20CAA731C6E4577E /* Pods-GifApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GifApp.debug.xcconfig"; path = "Target Support Files/Pods-GifApp/Pods-GifApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EAA702609019CC7BBEA5D67E /* Pods-GifApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GifApp.release.xcconfig"; path = "Target Support Files/Pods-GifApp/Pods-GifApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,6 +168,7 @@
 				7E268B9024DCBB2D0071BF3B /* Constant.swift */,
 				7E268BFE24E06EE30071BF3B /* Utilities.swift */,
 				7E62C26E24E1DF1D0024EAB8 /* Enums.swift */,
+				7EEF40AF24FB41B5007D0A42 /* ExtentionUiViewController.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 				7E268B4C24DCA03B0071BF3B /* SceneDelegate.swift */,
 				7E268B5324DCA03F0071BF3B /* Assets.xcassets */,
 				7E268B5824DCA03F0071BF3B /* Info.plist */,
+				7E85BE9124FEB66500821359 /* ApiKeys.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -299,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E268B5724DCA03F0071BF3B /* LaunchScreen.storyboard in Resources */,
+				7E85BE9224FEB66500821359 /* ApiKeys.plist in Resources */,
 				7E268B5424DCA03F0071BF3B /* Assets.xcassets in Resources */,
 				7E268B5224DCA03B0071BF3B /* Main.storyboard in Resources */,
 			);
@@ -366,6 +373,7 @@
 				7E268B9C24DE19A20071BF3B /* FirstViewModel.swift in Sources */,
 				7E268B8E24DCB9910071BF3B /* ModelImage.swift in Sources */,
 				7E268BBC24DE2EFB0071BF3B /* ModelFixedHeight.swift in Sources */,
+				7EEF40B024FB41B5007D0A42 /* ExtentionUiViewController.swift in Sources */,
 				7E268BCC24DE307E0071BF3B /* ModelSearchData.swift in Sources */,
 				7E268BCE24DE307E0071BF3B /* ModelSearchPagination.swift in Sources */,
 				7E268B6024DCA8E10071BF3B /* Services.swift in Sources */,

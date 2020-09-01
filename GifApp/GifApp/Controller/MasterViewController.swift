@@ -10,7 +10,7 @@ import UIKit
 protocol searchProtocol {
    func searchFunctionCall(searchText:String)
 }
-class MasterViewController: UIViewController {
+final class MasterViewController: UIViewController {
    
    @IBOutlet weak var searchBar: UISearchBar!
    @IBOutlet weak var customView: UIView!
@@ -21,11 +21,11 @@ class MasterViewController: UIViewController {
       super.viewDidLoad()
       addingChildVC()
    }
-   
 }
+
 // MARK: adding child view controller
 extension MasterViewController{
-   func addingChildVC(){
+   private func addingChildVC(){
       let storyboard = Utilities.getStoryboard(name: Storyboards.main.rawValue)
       searchVC = storyboard.instantiateViewController(identifier: ViewControllers.searchViewController.rawValue)
       firstVC = storyboard.instantiateViewController(identifier: ViewControllers.firstViewController.rawValue)
