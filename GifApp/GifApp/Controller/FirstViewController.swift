@@ -21,6 +21,7 @@ final class FirstViewController: UIViewController {
    override func viewDidLoad() {
       super.viewDidLoad()
       self.getRandomGif()  //getting random gif
+
    }
    
 }
@@ -30,21 +31,21 @@ extension FirstViewController{
    
    //function for getting random gif from api
   private func getRandomGif(){
-      self.activityIndicator.startAnimating()
-      Services.sharedInstance.getRandomGif { (data,error) in
+      activityIndicator.startAnimating()
+      Services.sharedInstance.getRandomGif {[weak self](data,error) in
          if let err = error  {
             print("\(err.localizedDescription)")
-            self.showAlert(title:err.localizedDescription,msg:"")
+            self?.showAlert(title:err.localizedDescription,msg:"")
          }
          else
          {
-            let randomGifData = FirstViewModel(data: data!)
+            let randomGifData = FirstViewModel(gifUrl: data?.images?.fixedWidth?.url, gifTitle: data?.title, gifPg: data?.rating)
             let url = randomGifData.gifUrl ?? ""
             let title = randomGifData.gifTitle ?? ""
             let pgRating = randomGifData.gifPg ?? ""
             DispatchQueue.main.async {
-               self.showRandomGif(urlGif: url)
-               self.setGifContent(gifTitle: title, gifUrl: url,pg:pgRating)
+               self?.showRandomGif(urlGif: url)
+               self?.setGifContent(gifTitle: title, gifUrl: url,pg:pgRating)
             }
          }
       }
@@ -70,7 +71,7 @@ extension FirstViewController{
    private func showRandomGif(urlGif:String){
       let url = URL(string: urlGif)
       imageView.kf.setImage(with: url)
-      self.activityIndicator.stopAnimating()
-      self.activityIndicator.isHidden = true
+      activityIndicator.stopAnimating()
+      activityIndicator.isHidden = true
    }
 }

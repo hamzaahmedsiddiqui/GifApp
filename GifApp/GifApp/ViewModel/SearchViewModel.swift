@@ -6,9 +6,9 @@
 //  Copyright © 2020 Hamza. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class SearchViewModel: NSObject {
+struct SearchViewModel {
    let stilGifUrl:String?
    let gifUrl:String?
    let gifTitle:String?

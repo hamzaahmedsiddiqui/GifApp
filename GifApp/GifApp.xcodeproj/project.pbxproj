@@ -35,10 +35,21 @@
 		7E268BFF24E06EE30071BF3B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E268BFE24E06EE30071BF3B /* Utilities.swift */; };
 		7E268C0124E0D9510071BF3B /* GifDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E268C0024E0D9510071BF3B /* GifDetailViewController.swift */; };
 		7E62C26F24E1DF1D0024EAB8 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E62C26E24E1DF1D0024EAB8 /* Enums.swift */; };
+		7E82DFC1250FC25A00A087AA /* GifApp_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E82DFC0250FC25A00A087AA /* GifApp_Tests.swift */; };
 		7E85BE9224FEB66500821359 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E85BE9124FEB66500821359 /* ApiKeys.plist */; };
 		7EEF40B024FB41B5007D0A42 /* ExtentionUiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEF40AF24FB41B5007D0A42 /* ExtentionUiViewController.swift */; };
 		A99070CCC0D654C3D2335CA4 /* Pods_GifApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C07C5FFA5D046D35DB09CE /* Pods_GifApp.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7E82DFC3250FC25A00A087AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E268B3F24DCA03A0071BF3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E268B4624DCA03A0071BF3B;
+			remoteInfo = GifApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		34C07C5FFA5D046D35DB09CE /* Pods_GifApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GifApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +83,9 @@
 		7E268BFE24E06EE30071BF3B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		7E268C0024E0D9510071BF3B /* GifDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifDetailViewController.swift; sourceTree = "<group>"; };
 		7E62C26E24E1DF1D0024EAB8 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		7E82DFBE250FC25A00A087AA /* GifApp Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GifApp Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E82DFC0250FC25A00A087AA /* GifApp_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifApp_Tests.swift; sourceTree = "<group>"; };
+		7E82DFC2250FC25A00A087AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E85BE9124FEB66500821359 /* ApiKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
 		7EEF40AF24FB41B5007D0A42 /* ExtentionUiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionUiViewController.swift; sourceTree = "<group>"; };
 		8E40119A20CAA731C6E4577E /* Pods-GifApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GifApp.debug.xcconfig"; path = "Target Support Files/Pods-GifApp/Pods-GifApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +99,13 @@
 			files = (
 				7E268B9724DCF5E40071BF3B /* Kingfisher.framework in Frameworks */,
 				A99070CCC0D654C3D2335CA4 /* Pods_GifApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E82DFBB250FC25A00A087AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				7E268B4924DCA03B0071BF3B /* GifApp */,
+				7E82DFBF250FC25A00A087AA /* GifApp Tests */,
 				7E268B4824DCA03B0071BF3B /* Products */,
 				CA52A9C66B510BC38B5C146C /* Pods */,
 				5DCF53B444BC5158E5110E43 /* Frameworks */,
@@ -114,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				7E268B4724DCA03B0071BF3B /* GifApp.app */,
+				7E82DFBE250FC25A00A087AA /* GifApp Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -235,6 +258,39 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		7E3647A82511A0ED00AACF75 /* Cases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cases;
+			sourceTree = "<group>";
+		};
+		7E3647A92511A0FB00AACF75 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				7E82DFC2250FC25A00A087AA /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		7E3647AA2511A11400AACF75 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		7E82DFBF250FC25A00A087AA /* GifApp Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7E3647A82511A0ED00AACF75 /* Cases */,
+				7E3647AA2511A11400AACF75 /* Data */,
+				7E82DFC0250FC25A00A087AA /* GifApp_Tests.swift */,
+				7E3647A92511A0FB00AACF75 /* SupportingFiles */,
+			);
+			path = "GifApp Tests";
+			sourceTree = "<group>";
+		};
 		CA52A9C66B510BC38B5C146C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +322,24 @@
 			productReference = 7E268B4724DCA03B0071BF3B /* GifApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7E82DFBD250FC25A00A087AA /* GifApp Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E82DFC7250FC25A00A087AA /* Build configuration list for PBXNativeTarget "GifApp Tests" */;
+			buildPhases = (
+				7E82DFBA250FC25A00A087AA /* Sources */,
+				7E82DFBB250FC25A00A087AA /* Frameworks */,
+				7E82DFBC250FC25A00A087AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E82DFC4250FC25A00A087AA /* PBXTargetDependency */,
+			);
+			name = "GifApp Tests";
+			productName = "GifApp Tests";
+			productReference = 7E82DFBE250FC25A00A087AA /* GifApp Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -278,6 +352,10 @@
 				TargetAttributes = {
 					7E268B4624DCA03A0071BF3B = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					7E82DFBD250FC25A00A087AA = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 7E268B4624DCA03A0071BF3B;
 					};
 				};
 			};
@@ -295,6 +373,7 @@
 			projectRoot = "";
 			targets = (
 				7E268B4624DCA03A0071BF3B /* GifApp */,
+				7E82DFBD250FC25A00A087AA /* GifApp Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -308,6 +387,13 @@
 				7E85BE9224FEB66500821359 /* ApiKeys.plist in Resources */,
 				7E268B5424DCA03F0071BF3B /* Assets.xcassets in Resources */,
 				7E268B5224DCA03B0071BF3B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E82DFBC250FC25A00A087AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,7 +474,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7E82DFBA250FC25A00A087AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E82DFC1250FC25A00A087AA /* GifApp_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7E82DFC4250FC25A00A087AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E268B4624DCA03A0071BF3B /* GifApp */;
+			targetProxy = 7E82DFC3250FC25A00A087AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7E268B5024DCA03B0071BF3B /* Main.storyboard */ = {
@@ -562,6 +664,44 @@
 			};
 			name = Release;
 		};
+		7E82DFC5250FC25A00A087AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GifApp Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Hamza.GifApp-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GifApp.app/GifApp";
+			};
+			name = Debug;
+		};
+		7E82DFC6250FC25A00A087AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GifApp Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Hamza.GifApp-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GifApp.app/GifApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -579,6 +719,15 @@
 			buildConfigurations = (
 				7E268B5C24DCA03F0071BF3B /* Debug */,
 				7E268B5D24DCA03F0071BF3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E82DFC7250FC25A00A087AA /* Build configuration list for PBXNativeTarget "GifApp Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E82DFC5250FC25A00A087AA /* Debug */,
+				7E82DFC6250FC25A00A087AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
