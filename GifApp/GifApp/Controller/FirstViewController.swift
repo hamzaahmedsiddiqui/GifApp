@@ -18,10 +18,10 @@ final class FirstViewController: UIViewController {
    //  @IBOutlet var SearchView: UIView!
    
    
-   override func viewDidLoad() {
+   override func viewDidLoad()
+   {
       super.viewDidLoad()
       self.getRandomGif()  //getting random gif
-
    }
    
 }
@@ -33,7 +33,7 @@ extension FirstViewController{
   private func getRandomGif(){
       activityIndicator.startAnimating()
       Services.sharedInstance.getRandomGif {[weak self](data,error) in
-         if let err = error  {
+         if let err = error {
             print("\(err.localizedDescription)")
             self?.showAlert(title:err.localizedDescription,msg:"")
          }

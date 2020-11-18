@@ -15,7 +15,7 @@ struct SearchViewModel {
    let gifPg:String?
    
    
-   init(data:ModelSearchData) {
+   init( data:ModelSearchData) {
       stilGifUrl = data.images?.fixedWidthStill?.url ?? ""
       gifTitle = data.title ?? ""
       gifPg = data.rating ?? ""

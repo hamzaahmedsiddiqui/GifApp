@@ -258,13 +258,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		7E3647A82511A0ED00AACF75 /* Cases */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cases;
-			sourceTree = "<group>";
-		};
 		7E3647A92511A0FB00AACF75 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,18 +266,9 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		7E3647AA2511A11400AACF75 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
 		7E82DFBF250FC25A00A087AA /* GifApp Tests */ = {
 			isa = PBXGroup;
 			children = (
-				7E3647A82511A0ED00AACF75 /* Cases */,
-				7E3647AA2511A11400AACF75 /* Data */,
 				7E82DFC0250FC25A00A087AA /* GifApp_Tests.swift */,
 				7E3647A92511A0FB00AACF75 /* SupportingFiles */,
 			);

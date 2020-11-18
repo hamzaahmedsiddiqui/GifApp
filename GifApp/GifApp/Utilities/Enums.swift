@@ -8,20 +8,21 @@
 
 import Foundation
 
-enum ViewControllers : String{
+enum ViewControllers : String
+{
    case searchViewController = "SearchViewController"
    case firstViewController = "FirstViewController"
    case gifDetailViewController = "GifDetailViewController"
 }
 
-enum Storyboards : String{
+enum Storyboards : String
+{
    case main = "Main"
 }
 
-enum pgEnum : String {
-   
+enum pgEnum : String
+{
    case pg13 = "pg-13"
    case pg = "pg"
    case r = "r"
-   
 }
